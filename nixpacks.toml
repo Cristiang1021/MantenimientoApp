@@ -1,3 +1,7 @@
+[providers]
+node = "18"  # Usa Node.js 18 (o la versión que necesites)
+python = "3.9"  # Usa Python 3.9 (o la versión que necesites)
+
 [phases.setup]
 cmds = [
     "echo 'Configurando el backend...'",
