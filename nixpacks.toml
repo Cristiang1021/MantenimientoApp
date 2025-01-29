@@ -1,0 +1,16 @@
+[phases.setup]
+cmds = [
+    "echo 'Configurando el backend...'",
+    "cd backend && pip install -r requirements.txt",
+    "echo 'Configurando el frontend...'",
+    "cd frontend && npm install",
+]
+
+[phases.build]
+cmds = [
+    "echo 'Construyendo el frontend...'",
+    "cd frontend && npm run build",
+]
+
+[start]
+cmd = "echo 'Iniciando backend y frontend...' && cd backend && gunicorn app:app & cd ../frontend && npm run start"
